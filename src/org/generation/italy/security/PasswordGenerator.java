@@ -1,15 +1,35 @@
 package org.generation.italy.security;
 
+import java.util.Scanner;
+
 public class PasswordGenerator {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String firstName = "Luca";
-		String lastName = "Il-Grande";
-		String favColor = "Purple";
-		short day = 26;
-		short month = 7;
-		short year = 1996;
+		Scanner keyboardFirstName = new Scanner(System.in);
+		System.out.println("Enter first name: ");
+		String firstName = keyboardFirstName.nextLine();
+		
+		Scanner keyboardLastName = new Scanner(System.in);
+		System.out.println("Enter last name: ");
+		String lastName = keyboardLastName.nextLine();
+		
+		Scanner keyboardFavColor = new Scanner(System.in);
+		System.out.println("Enter favorite color: ");
+		String favColor = keyboardFavColor.nextLine();
+		
+		Scanner keyboardDay = new Scanner(System.in);
+		System.out.println("Enter day of birth: ");
+		int day = keyboardDay.nextInt();
+		
+		Scanner keyboardMonth = new Scanner(System.in);
+		System.out.println("Enter month of birth: ");
+		int month = keyboardMonth.nextInt();
+		
+		Scanner keyboardYear = new Scanner(System.in);
+		System.out.println("Enter year of birth: ");
+		int year = keyboardYear.nextInt();
 		
 		short birthSum = (short) (day + month + year);
 		System.out.println("Password: " + firstName + "-" + lastName + "-" + favColor + "-" + birthSum);
