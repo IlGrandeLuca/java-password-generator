@@ -7,29 +7,25 @@ public class PasswordGeneratorInput {
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner keyboardFirstName = new Scanner(System.in);
+		Scanner in = new Scanner(System.in);
+		
 		System.out.println("Enter first name: ");
-		String firstName = keyboardFirstName.nextLine();
+		String firstName = in.nextLine();
 		
-		Scanner keyboardLastName = new Scanner(System.in);
 		System.out.println("Enter last name: ");
-		String lastName = keyboardLastName.nextLine();
+		String lastName = in.nextLine();
 		
-		Scanner keyboardFavColor = new Scanner(System.in);
 		System.out.println("Enter favorite color: ");
-		String favColor = keyboardFavColor.nextLine();
+		String favColor = in.nextLine();
 		
-		Scanner keyboardDay = new Scanner(System.in);
 		System.out.println("Enter day of birth: ");
-		int day = keyboardDay.nextInt();
+		int day = in.nextInt();
 		
-		Scanner keyboardMonth = new Scanner(System.in);
 		System.out.println("Enter month of birth: ");
-		int month = keyboardMonth.nextInt();
+		int month = in.nextInt();
 		
-		Scanner keyboardYear = new Scanner(System.in);
 		System.out.println("Enter year of birth: ");
-		int year = keyboardYear.nextInt();
+		int year = in.nextInt();
 		
 		short birthSum = (short) (day + month + year);
 		System.out.println("Password: " + firstName + "-" + lastName + "-" + favColor + "-" + birthSum);
